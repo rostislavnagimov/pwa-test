@@ -7,6 +7,10 @@
   min-width: 100vw;
 }
 
+.iframe {
+  display: none;
+}
+
 .button {
   color: white;
   background-color: rgb(25, 106, 218);
@@ -41,4 +45,18 @@
   80% {transform: rotate(1deg)}
   90% {transform: rotate(-1deg)}
   100% {transform: scale(1)}
+}
+@media all and (display-mode: standalone) {
+  .button {
+    display: none;
+  }
+
+  .iframe {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
